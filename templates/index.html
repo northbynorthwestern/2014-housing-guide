@@ -145,7 +145,7 @@
                             <div class="dot perfect-fit"></div>
                             <p class="float-left">Perfect</p>
                             <div class="dot good-fit"></div>
-                            <p class="float-left">¯\_(ツ)_/¯</p>
+                            <p class="float-left">Meh</p>
                             <div class="dot bad-fit"></div>
                             <p class="float-left">Not your type</p>
                         </div>
@@ -156,13 +156,6 @@
         </div><!-- End nested grid container -->
 
     </div><!-- End grid container -->
-
-
-    <div class="grid padded">
-      <div class="filter-exp grid__item one-whole">
-        <p class="body-text" style="padding: 1em; background-color: rgba(80, 31, 132, 0.05);"><strong>Editor's Note:</strong> This year North by Northwestern did not include Shepard Residential College, Public Affairs Residential College, the North Mid-Quads and the South Mid-Quads because of ongoing rennovations. SMQ and NMQ will be hosting the two Residential Colleges next year, so check out <a target="_blank" href="http://apps.northbynorthwestern.com/housing/2014/"><strong>last year's housing guide</strong></a> to learn about those dorms.</p>
-      </div>
-    </div>
 
     <h3 class="padding-top padding-left">About the filters</h3>
     <div class="grid padded">
@@ -180,31 +173,6 @@
         </div>
     </div>
 
-    <div class="related clearfix" id="related">
-
-      <div class="padded intro">
-        <p class="body-text"><a target="_blank" href="http://northbynorthwestern.com">North by Northwestern</a> is an independent student-run publication that covers all things Northwestern, from campus speeches to the best campus hookup spots. We don't publish over the summer, but follow us on <a target="_blank" href="http://twitter.com/nbn_tweets">Twitter</a> and on <a target="_blank" href="https://www.facebook.com/northbynorthwestern">Facebook</a> for content starting during Welcome Week.</p>
-        <p class="sans-serif"><strong>In the meantime, check out some of these other <span class="purple">North by Northwestern</span> stories to help you prepare for freshman year:</strong></p>
-      </div>
-
-      <div class="related-grid">
-        {% for article in COPY.featured_articles %}
-          {% if loop.index % 2 == 0 %}
-          <div class="filter-exp grid-item clearfix">
-          {% else %}
-          <div class="filter-exp grid-item">
-          {% endif %}
-            <a href="{{ article.url }}" target="_blank">
-              <img src="{{ article.img }}">
-              <div class="text">
-                <h2 class="title">{{ article.title }}</h2>
-                <p class="body-text">{{ article.teaser_sentence }}</p>
-              </div>
-            </a>
-          </div>
-        {% endfor %}
-      </div>
-    </div>
 {% endblock %}
 
 {% block extra_foot_js %}
