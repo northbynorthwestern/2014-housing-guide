@@ -51,19 +51,13 @@ success:function(data) {
 
 function parse_map_data(data){
   $.each(data, function(key, val){
-    if (val.properties.name !== 'Shepard Residential College' &&
-        val.properties.name !== 'South Mid-Quads Residence Hall' &&
-        val.properties.name !== 'North Mid-Quads Residence Hall' &&
-        val.properties.name !== 'Public Affairs Residential College') {
-
-        geojson = new L.GeoJSON(val, {
-          onEachFeature: onEachFeature,
-          style: function(feature) {
-            return defaultStyle;
-          }
-        }).addTo(map);
-        jsonLayers.push({name: val.properties.name, value: geojson}); // jsonLayers[].value.setStyle() to change style
-      }
+      geojson = new L.GeoJSON(val, {
+        onEachFeature: onEachFeature,
+        style: function(feature) {
+          return defaultStyle;
+        }
+      }).addTo(map);
+      jsonLayers.push({name: val.properties.name, value: geojson}); // jsonLayers[].value.setStyle() to change style
   });
 }
 
